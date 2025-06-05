@@ -6,7 +6,7 @@ from keep_alive import keep_alive
 TOKEN = os.getenv("BOT_TOKEN")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    keyboard = [[InlineKeyboardButton("📞 Позвонить Юле", url="tel:+79616784444")]]
+    keyboard = [[InlineKeyboardButton("📞 Контакт: +79616784444", callback_data="contact_info")]]
     reply_markup = InlineKeyboardMarkup(keyboard)
     text = (
         "🏡 Добро пожаловать!\n\n"
