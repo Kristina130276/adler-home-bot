@@ -7,11 +7,9 @@ TOKEN = os.getenv("BOT_TOKEN")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [
-        [
-           InlineKeyboardButton("📲 Написать в WhatsApp", url="https://wa.me/79616784444"),
-           InlineKeyboardButton("🔗 Подробнее на Avito", url="https://www.avito.ru/sochi/doma_dachi_kottedzhi/4-k._dom_109_m_4865915984")
-        ]
-]
+        [InlineKeyboardButton("📲 Написать в WhatsApp", url="https://wa.me/79616784444")],
+        [InlineKeyboardButton("🔗 Подробнее на Avito", url="https://www.avito.ru/sochi/doma_dachi_kottedzhi/4-k._dom_109_m_4865915984")]
+    ]
 
     reply_markup = InlineKeyboardMarkup(keyboard)
 
