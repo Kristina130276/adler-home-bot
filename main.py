@@ -15,9 +15,9 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     text = (
         "🏡 Добро пожаловать!\n\n"
-        "📍Предлагаем уютный дом в Адлере, всего в 10 минутах от пляжа.\n"
+        "📍Домик с видом на море.\n"
         "🛏️ 4 комнаты, 109 м²\n"
-        "🌿 Закрытая территория, центральные коммуникации"
+        "🌿 Закрытая территория, все коммуникации"
     )
     await update.message.reply_text(text, reply_markup=reply_markup)
 
