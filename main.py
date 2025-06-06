@@ -6,11 +6,12 @@ from keep_alive import keep_alive
 TOKEN = os.getenv("BOT_TOKEN")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    keyboard = [
-        [InlineKeyboardButton("📞 Контакт: +79616784444", callback_data="contact_info")]],
-        [InlineKeyboardButton("ссылка" Подробнее на Avito, url="https://www.avito.ru/sochi/doma_dachi_kottedzhi/4-k._dom_109_m_4865915984")]
-    ]    
-    reply_markup = InlineKeyboardMarkup(keyboard)
+keyboard = [
+    [InlineKeyboardButton("📞 Контакт: +79616784444", callback_data="contact_info")],
+    [InlineKeyboardButton("📎 Подробнее на Avito", url="https://www.avito.ru/sochi/doma_dachi_kottedzhi/4-k._dom_109_m_4865915984")]
+]
+reply_markup = InlineKeyboardMarkup(keyboard)
+
     text = (
         "🏡 Добро пожаловать!\n\n"
         "📍Предлагаем уютный дом в Адлере, всего в 10 минутах от пляжа.\n"
