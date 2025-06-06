@@ -20,4 +20,14 @@ if __name__ == '__main__':
     keep_alive()
     app = ApplicationBuilder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))
+    
+    # Устанавливаем webhook
+    import requests
+    set_webhook_url = os.getenv("WEBHOOK_URL")
+    webhook_url = f"{set_webhook_url}/webhook"
+    requests.get(f"https://api.telegram.org/bot{TOKEN}/setWebhook?url={webhook_url}")
+
     app.run_polling()
+
+    
+   
